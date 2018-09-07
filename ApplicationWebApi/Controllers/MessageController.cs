@@ -27,8 +27,6 @@ namespace ApplicationWebApi.Controllers
         {
             try
             {
-
-
              return Ok( messageService.SaveMessage(mes));
                 
             }

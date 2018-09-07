@@ -20,7 +20,7 @@ namespace Application.Service.Services
                 {
 
                     // отправитель - устанавливаем адрес и отображаемое в письме имя
-                    MailAddress from = new MailAddress("Vladlegenda97@gmai.com", "Vladislav");
+                    MailAddress from = new MailAddress("Vladlegenda97@gmail.com", "Vladislav");
                     // кому отправляем
                     MailAddress to = new MailAddress(resipient);
                     // создаем объект сообщения
@@ -34,7 +34,7 @@ namespace Application.Service.Services
                     // адрес smtp-сервера и порт, с которого будем отправлять письмо
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     // логин и пароль
-                    smtp.Credentials = new NetworkCredential("Vladlegenda97@gmai.com", "DickHead");
+                    smtp.Credentials = new NetworkCredential("Vladlegenda97@gmail.com", "DickHead");
                     smtp.EnableSsl = true;
                     smtp.Send(m);
                   
