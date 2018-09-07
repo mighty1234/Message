@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Web.Http.Description;
 
 namespace ApplicationWebApi.Controllers
 {
@@ -14,15 +14,28 @@ namespace ApplicationWebApi.Controllers
     {
         private IMessageService messageService = new MessageService();
 
+        [ResponseType(typeof(Message))]
         [Route("api/message/getall")]
         public IEnumerable<Message> GetAll()
         {
             return messageService.GetMessage();
         }
-        //[Route("api/message/Save")]
-        //public bool SaveMessage(Message mes)
-        //{
 
-        //}
+        [ResponseType(typeof(Guid))]
+        [Route("api/message/save")]
+        public IHttpActionResult SaveMessage(Message mes)
+        {
+            try
+            {
+
+
+             return Ok( messageService.SaveMessage(mes));
+                
+            }
+            catch (Exception)
+            {
+             return StatusCode(HttpStatusCode.BadRequest);
+            }
+        }
     }
 }

@@ -20,5 +20,17 @@ namespace Application.Service.Services
             // return db.Message.Where(x=>x.guid==id);
             return null;
         }
+
+        public Guid SaveMessage(Message mess)
+        {
+          var x=  EmailService.SendEmail(mess);
+            mess.IsSent = (!x) ? false : true;          
+              
+            db.Message.Add(mess);
+            db.SaveChanges();
+            return mess.guid;
+        }
+
+        
     }
 }
