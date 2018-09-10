@@ -24,7 +24,7 @@ namespace Application.Service.Services
         public Guid SaveMessage(Message mess)
         {
           var x=  EmailService.SendEmail(mess);
-            mess.IsSent = (!x) ? false : true;          
+            mess.IsSent =x;          
               
             db.Message.Add(mess);
             db.SaveChanges();

@@ -35,7 +35,7 @@ namespace Application.Service.Services
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     // логин и пароль
                     smtp.Credentials = new NetworkCredential("Vladlegenda97@gmail.com", "DickHead");
-                    smtp.EnableSsl = true;
+                    smtp.EnableSsl = false;
                     smtp.Send(m);
                   
                 }
