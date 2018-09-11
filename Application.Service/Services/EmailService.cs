@@ -34,7 +34,7 @@ namespace Application.Service.Services
                     // адрес smtp-сервера и порт, с которого будем отправлять письмо
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     // логин и пароль
-                    smtp.Credentials = new NetworkCredential("Vladlegenda97@gmail.com", "DickHead");
+                    smtp.Credentials = new NetworkCredential("Vladlegenda97@gmail.com", "Vladislav1997");
                     smtp.EnableSsl = false;
                     smtp.Send(m);
                   
