@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\Vlad\Desktop\testtask\Application\Application.Data\Message.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Vlad\Source\Repos\Descpot\Application\Application.Data\SoftPi.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

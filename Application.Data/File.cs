@@ -12,12 +12,20 @@ namespace Application.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Message
+    public partial class File
     {
-        public System.Guid guid { get; set; }
-        public string Recipients { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
-        public Nullable<bool> IsSent { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public File()
+        {
+            this.Log = new HashSet<Log>();
+        }
+    
+        public int Id { get; set; }
+        public string Path { get; set; }
+        public string Name { get; set; }
+        public Nullable<int> Size { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Log> Log { get; set; }
     }
 }

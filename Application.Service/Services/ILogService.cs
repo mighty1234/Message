@@ -8,13 +8,9 @@ using Application.Data;
 
 namespace Application.Service.Services
 {
- public   interface IMessageService
+ public   interface ILogService
     {
-        List<Message> GetMessage();
-        Message GetMessageById(Guid id);
-        Guid SaveMessage(Message mess);
-
-
-
+        List<Log> GetLog();
+     
     }
 }

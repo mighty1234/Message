@@ -13,10 +13,10 @@ namespace Application.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MessageEntity : DbContext
+    public partial class SoftPiEntities : DbContext
     {
-        public MessageEntity()
-            : base("name=MessageEntity")
+        public SoftPiEntities()
+            : base("name=SoftPiEntities")
         {
         }
     
@@ -25,6 +25,8 @@ namespace Application.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Message> Message { get; set; }
+        public virtual DbSet<File> File { get; set; }
+        public virtual DbSet<IP> IP { get; set; }
+        public virtual DbSet<Log> Log { get; set; }
     }
 }

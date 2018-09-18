@@ -187,28 +187,34 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="File.cs">
+      <DependentUpon>SoftPi.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Message.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.Context.tt</DependentUpon>
+    <Compile Include="IP.cs">
+      <DependentUpon>SoftPi.tt</DependentUpon>
     </Compile>
-    <Compile Include="Message.cs">
-      <DependentUpon>Message.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Message.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Message1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.tt</DependentUpon>
+    <Compile Include="Log.cs">
+      <DependentUpon>SoftPi.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftPi.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoftPi.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SoftPi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoftPi.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SoftPi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoftPi.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -217,16 +223,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Message.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Message.edmx</DependentUpon>
-      <LastGenOutput>Message.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Message.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Message.edmx</DependentUpon>
-      <LastGenOutput>Message1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -251,19 +247,22 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Message.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Message.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Message.edmx.diagram">
-      <DependentUpon>Message.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="SoftPi.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SoftPi.edmx</DependentUpon>
+      <LastGenOutput>SoftPi.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SoftPi.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SoftPi.edmx</DependentUpon>
+      <LastGenOutput>SoftPi.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -278,6 +277,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <EntityDeploy Include="SoftPi.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SoftPi.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="SoftPi.edmx.diagram">
+      <DependentUpon>SoftPi.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
