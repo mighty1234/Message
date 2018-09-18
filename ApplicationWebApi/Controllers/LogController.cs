@@ -18,7 +18,7 @@ namespace ApplicationWebApi.Controllers
         private LogService logService = new LogService();
 
        
-       
+        
         [HttpGet]
         public  List<Log> GetAll()
         {                       
