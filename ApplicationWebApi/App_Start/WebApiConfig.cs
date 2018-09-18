@@ -11,6 +11,7 @@ namespace ApplicationWebApi
         {
             // Конфигурация и службы веб-API
 
+
             // Маршруты веб-API
             config.MapHttpAttributeRoutes();
 
